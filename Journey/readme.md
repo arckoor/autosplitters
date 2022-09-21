@@ -20,6 +20,9 @@ to 1 second instead of 10 milliseconds. Good if you have a weak CPU.
 ***Wait for 3 seconds before starting the pointer initialization*** - Waits an additional 3 seconds \
 before starting the search for the pointer path. Might get the timer to work if it didn't start before.
 
+***Don't split at the end of Paradise (Co-op mode)*** - Does not split when going through the light in Paradise. \
+Useful if you are running with a companion and want to manually split when the last of you finishes.
+
 ### My timer does not start!
 Try starting the timer after you have already started Journey.\
 If it still doesn't work, you can ask in the *#speedrun* channel of the below Discord, \

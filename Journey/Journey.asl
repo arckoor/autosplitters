@@ -10,6 +10,7 @@ state("Journey") {
 startup {
 	settings.Add("sleepForCS", true, "Pause between tries to locate CS Pointer");
 	settings.Add("safeStartUp", true, "Wait for 3 seconds before starting the pointer initialization");
+	settings.Add("coop", false, "Don't split at the end in Paradise (Co-op mode)");
 }
 
 init {
@@ -23,7 +24,7 @@ init {
 	System.Threading.Tasks.Task.Run(async () => {
 		int sleep = settings["sleepForCS"] ? 1000 : 10;
 
-		TaskStart: 
+		TaskStart:
 			try {
 				IntPtr addr = IntPtr.Zero;
 				DeepPointer ptr = new DeepPointer(0x018D2178, 0x560, 0x258, 0x2218, 0x48, 0xD4);
@@ -69,14 +70,15 @@ reset {
 
 split {
 	if (vars.splitsEnabled) {
-		if (current.levelID - 1 == old.levelID) {
+		if (current.levelID - 1 == old.levelID && current.levelID < 8) {
 			return true;
 		} else if (
 			current.levelID == 7 && 
 			current.posZ >= 993.1323 &&
 			current.posX >= 218.0 &&
 			current.posX <= 295.0 &&
-			current.posY <= 770.0
+			current.posY <= 770.0 &&
+			!settings["coop"]
 		) {
 			return true;
 		}
