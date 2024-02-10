@@ -26,7 +26,7 @@ Useful if you are running with a companion and want to manually split when the l
 ### My timer does not start!
 Try starting the timer after you have already started Journey.\
 If it still doesn't work, you can ask in the *#speedrun* channel of the below Discord, \
-or ping me (*arckoor#6568*) directly.
+or ping me (*arckoor*) directly.
 
 ### Known Limitations
 - You need to manually save after the run ends. The timer won't restart when teleporting to CS if you don't do this. 
@@ -37,4 +37,4 @@ Reset the timer manually before to avoid saving a gold split by mistake if you d
 
 ## Links and stuff
 Leaderboards: *[https://www.speedrun.com/Journey](https://www.speedrun.com/Journey)* \
-Discord: *[https://discord.gg/83QunNN](https://discord.gg/83QunNN)*
+Discord: *[https://discord.gg/TG6GMq4Cyg](https://discord.gg/TG6GMq4Cyg)*
